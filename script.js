@@ -35,5 +35,7 @@ const issueList = document.getElementById('issue-list');
     document.getElementById('load-prev').addEventListener('click', () => {
       if (currentPage > 1) {
         fetchIssues(currentPage - 1);
+      } else {
+        fetchIssues(1); // load first page when on second page
       }
     });
